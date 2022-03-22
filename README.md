@@ -62,7 +62,7 @@ In a Python script, run.py, including the codes for:
  numpy==1.12.1 \
  scikit-learn==0.19.1 \
  flask==0.12.5 \
- plotly==2.0.15 \
+ plotly==2.0.15
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
