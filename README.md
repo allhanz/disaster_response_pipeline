@@ -13,13 +13,13 @@
 
 ### Project Components
 There are three components in this project as follows:
-#### ETL Pipeline
+#### 1) ETL Pipeline
 In a Python script, process_data.py, including the codes for: 
  1) Loads the messages and categories datasets
  2) Merges the two datasets
  3) Cleans the data
  4) Stores it in a SQLite database
-#### ML Pipeline
+#### 2) ML Pipeline
 In a Python script, train_classifier.py, including the codes for:
 
  1) Loads data from the SQLite database
@@ -28,7 +28,7 @@ In a Python script, train_classifier.py, including the codes for:
  4) Trains and tunes a model using GridSearchCV
  5) Outputs results on the test set
  6) Exports the final model as a pickle file
-#### Flask Web App
+#### 3) Flask Web App
 In a Python script, run.py, including the codes for:
  1) build a web app for data visualization by mainly using plotly
 
