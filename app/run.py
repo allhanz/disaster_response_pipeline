@@ -42,12 +42,14 @@ def index():
     # TODO: Below is an example - modify to extract data for your own visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
+    medical_help_1=df[df["medical_help"]==1].groupby('genre').count()['message']
+    medical_help_0=df[df["medical_help"]==0].groupby('genre').count()['message']
     
     # let's calculate distribution of classes with 1
     class_distr1 = df.drop(['id', 'message', 'original', 'genre'], axis = 1).sum()/len(df)
     #sorting values in ascending
     class_distr1 = class_distr1.sort_values(ascending = False)
-    class_distr0 = (class_distr1 -1) * -1
+    #class_distr0 = (class_distr1 -1) * -1
     class_name = list(class_distr1.index)
     
     # create visuals
@@ -57,12 +59,23 @@ def index():
             'data': [
                 Bar(
                     x=genre_names,
-                    y=genre_counts
+                    y=genre_counts,
+                    name="genre_counts"
+                ),
+                Bar(
+                    x=genre_names,
+                    y=medical_help_0,
+                    name="medical_help==0"
+                ),
+                Bar(
+                    x=genre_names,
+                    y=medical_help_1,
+                    name="medical_help==1"
                 )
             ],
 
             'layout': {
-                'title': 'Distribution of Message Genres',
+                'title': 'Distribution of Message Genres vs medical_help',
                 'yaxis': {
                     'title': "Count"
                 },
