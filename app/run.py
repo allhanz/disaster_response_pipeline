@@ -43,6 +43,13 @@ def index():
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
     
+    # let's calculate distribution of classes with 1
+    class_distr1 = df.drop(['id', 'message', 'original', 'genre'], axis = 1).sum()/len(df)
+    #sorting values in ascending
+    class_distr1 = class_distr1.sort_values(ascending = False)
+    class_distr0 = (class_distr1 -1) * -1
+    class_name = list(class_distr1.index)
+    
     # create visuals
     # TODO: Below is an example - modify to create your own visuals
     graphs = [
@@ -63,7 +70,26 @@ def index():
                     'title': "Genre"
                 }
             }
+        },
+        {
+            "data":[
+                Bar(
+                    x=class_name,
+                    #y=class_distr0
+                    y=class_distr1
+                    )
+                ],
+            "layout":{
+                'title': 'Distribution of labels within classes',
+                'yaxis': {
+                    'title': "Distribution"
+                },
+                'xaxis': {
+                    'title': "Class"
+                }
+            }
         }
+        
     ]
     
     # encode plotly graphs in JSON
