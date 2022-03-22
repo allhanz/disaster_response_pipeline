@@ -3,6 +3,15 @@
 ### project overview
   this project is to identify the relationship between the disaster and the actual texture messages by using NLP tech.  
 
+### packages used in this project
+ pandas==0.23.3
+ nltk==3.2.5
+ sqlalchemy==1.2.19
+ numpy==1.12.1
+ scikit-learn==0.19.1
+ flask==0.12.5
+ plotly==2.0.15
+ 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
@@ -21,11 +30,4 @@
  ![alt text](/readme_images/example_usage.png "mess-labels")
 
 
-### packages used in this project
- pandas==0.23.3
- nltk==3.2.5
- sqlalchemy==1.2.19
- numpy==1.12.1
- scikit-learn==0.19.1
- flask==0.12.5
- plotly==2.0.15
+
