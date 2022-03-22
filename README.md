@@ -56,13 +56,13 @@ In a Python script, run.py, including the codes for:
     └── message_dataset.png # screenshort for the message dataset \
 
 ### packages used in this project
- pandas==0.23.3
- nltk==3.2.5
- sqlalchemy==1.2.19
- numpy==1.12.1
- scikit-learn==0.19.1
- flask==0.12.5
- plotly==2.0.15
+ pandas==0.23.3 \
+ nltk==3.2.5 \
+ sqlalchemy==1.2.19 \
+ numpy==1.12.1 \
+ scikit-learn==0.19.1 \
+ flask==0.12.5 \
+ plotly==2.0.15 \
 
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
