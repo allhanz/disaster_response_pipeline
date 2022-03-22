@@ -1,5 +1,8 @@
 # Disaster Response Pipeline Project
 
+### project overview
+  this project is to identify the relationship between the disaster and the actual texture messages by using NLP tech.  
+
 ### Instructions:
 1. Run the following commands in the project's root directory to set up your database and model.
 
@@ -12,6 +15,10 @@
     `python run.py`
 
 3. Go to http://0.0.0.0:3001/
+ ![alt text](/readme_images/main_web_screen.png "mess-labels")
+
+4. Input some texture message just you like. and you will get the similar results as follows
+ ![alt text](/readme_images/example_usage.png "mess-labels")
 
 
 ### packages used in this project
